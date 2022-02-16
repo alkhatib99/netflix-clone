@@ -1,4 +1,4 @@
-import { Card, CardGroup } from "react-bootstrap";
+import { Card, CardGroup, Button } from "react-bootstrap";
 function FavList(props) {
   console.log(props);
   return (
@@ -16,7 +16,13 @@ function FavList(props) {
                 <Card.Title>{movie.title}</Card.Title>
                 <Card.Text>{movie.overview}</Card.Text>
               </Card.Body>
-            </Card>
+              <Button className="addBtn" variant="primary" type="submit"   >
+                        Add 
+                    </Button>          
+                    <Button className="deleteBtn" variant="primary" type="reset"   >
+                        delete
+                    </Button> 
+                      </Card>
           );
         })}
       </CardGroup>
